@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飛馬電腦 PEGASUS｜主頁</title>
+
+    <!-- Inline CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 300px; /* 可根据需要调整宽度 */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+        .product-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .product-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        /* Slideshow CSS */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .mySlides {
+            display: none;
+        }
+        .fade {
+            animation: fade 1s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Ensure all images in the slideshow have the same size */
+        .slideshow-container img {
+            width: 100%; /* Full width */
+            height: 300px; /* Fixed height */
+            object-fit: cover; /* Cover the area while maintaining aspect ratio */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>飛馬電腦 PEGASUS</h1>
+        <nav>
+            <a href="HomePage.html">主頁</a>
+            <a href="ProductsPage.html">產品</a>
+            <a href="ContactPage.html">聯絡我們</a>
+            <a href="LoginPage.html">登入</a>
+        </nav>
+        <!-- 搜索栏 -->
+        <div class="search-bar">
+            <input type="text" placeholder="搜索產品..." aria-label="搜索產品">
+            <button type="button">搜索</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>歡迎來到飛馬電腦！</h2>
+        <p>我們提供各種電腦配件和設備，滿足您的需求。</p>
+    </div>
+
+    <main class="container">
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="1600w.png" alt="Display Card">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="1500w.png" alt="Image Two">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="1400w.png" alt="Image Three">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="1300w.png" alt="Image Four">
+                <div class="text">Caption Four</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+
+        <section class="product-section">
+            <h2>電腦配件和設備</h2>
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <img src="5090-Display-card.jpg" alt="High Performance" style="max-width: 200px;">
+                    <h3>顯示卡</h3>
+                    <p>高性能顯示卡</p>
+                    <a href="DisplayCard.html" class="btn">更多內容</a>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <img src="final1.png" alt="Wireless Mouse" style="max-width: 200px;">
+                    <h3>Logitech Wireless Mouse</h3>
+                    <p>Premium Comfort and Performance</p>
+                    <a href="Wireless-Mouse.html" class="btn">更多內容</a>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <img src="980pro.png" alt="External Hard Drive" style="max-width: 200px;">
+                    <h3>SSD/HDD</h3>
+                    <p>High Capacity and Fast Read Speeds</p>
+                    <a href="Drive.html" class="btn">更多內容</a>
+                </div>
+
+                    <!-- Product Card 4 -->
+                <div class="product-card">
+                    <img src="Monitor240.png" alt="External Hard Drive" style="max-width: 200px;">
+                    <h3>Monitor</h3>
+                    <p>High Capacity and Fast Read Speeds</p>
+                    <a href="Monitor240.html" class="btn">更多內容</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2023 Pegasus Computer All rights reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        setInterval(() => {
+            plusSlides(1);
+        }, 3000); // 每3000毫秒（3秒）切换一次
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+</body>
+</html>

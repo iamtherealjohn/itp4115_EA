@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireless Gaming Mouse</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            color: #333; /* Darker color for better readability */
+        }
+        .specs {
+            margin-top: 20px;
+        }
+        .specs h3 {
+            margin-bottom: 10px;
+        }
+        .collapsible {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .additional-images {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2列布局 */
+            gap: 10px; /* 图片间隔 */
+        }
+        .image-grid img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Gaming Mouse</h1>
+    </header>
+
+    <div class="container">
+        <!-- Move the additional images section to the top -->
+        <div class="additional-images">
+            <h3>More Images:</h3>
+            <div class="image-grid">
+                <img src="final.png" alt="GeForce RTX 5090 Image 1">
+                <img src="final1.png" alt="GeForce RTX 5090 Image 2">
+                <img src="final.png" alt="GeForce RTX 5090 Image 3">
+                <img src="final1.png" alt="GeForce RTX 5090 Image 4">
+            </div>
+        </div>
+
+        <img src="final.png" alt="GeForce RTX 5090" class="product-image">
+        <h2>High-Performance Wireless Gaming Mouse</h2>
+        <p>This wireless gaming mouse is designed for gamers who demand top-tier performance and precision.</p>
+
+        <div class="specs">
+            <h3>Key Specifications:</h3>
+
+                <li>*Approximate weights measured without skates and may have a variance of ±2g from unit to unit</li>
+                <li>Connectivity:</li>
+                <ul>
+                    <li>Finalmouse Highspeed Wireless (2.4GHz)</li>
+                    <li>Wired USB-C and USB-C Charging</li>
+                </ul>
+
+            </ul>
+        </div>
+
+        <button class="collapsible">View Additional Specifications</button>
+        <div class="content">
+            <h3>Additional Specifications:</h3>
+            <li>In the Box:</li>
+            <ul>
+                <li>UltralightX Wireless Gaming Mouse</li>
+                <li>UltralightX Wireless Receiver</li>
+                <li>USB-C Cable</li>
+                <li>Product Documentation</li>
+            </ul>
+            <ul>
+                <li>Cheetah (Small): 115.6mm Length x 54.1mm Grip Width x 35.2mm Height</li>
+                <li>Lion (Medium): 121.3mm Length x 56.8mm Grip Width x 37mm Height</li>
+                <li>Tiger (Large): 126mm Length x 59mm Grip Width x 38.4mm Height</li>
+            </ul>
+            <ul>
+                <li>UltralightX Wireless Gaming Mouse</li>
+                <li>UltralightX Wireless Receiver</li>
+                <li>USB-C Cable</li>
+                <li>Product Documentation</li>
+            </ul>
+            <ul>
+                <li>Approximate Weight*:</li>
+                <ul>
+                    <li>Cheetah (Small): 31 Grams</li>
+                    <li>Lion (Medium): 35 Grams</li>
+                    <li>Tiger (Large): 37 Grams</li>
+                </ul>
+        </div>
+
+        <a href="HomePage.html" class="btn">Back to Products</a>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飛馬電腦 PEGASUS｜登入</title>
+
+    <!-- Inline CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>飛馬電腦 PEGASUS</h1>
+        <nav>
+            <a href="HomePage.html">主頁</a>
+            <a href="ProductsPage.html">產品</a>
+            <a href="ContactPage.html">聯絡我們</a>
+            <a href="LoginPage.html">登入</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>登入</h2>
+        <form id="loginForm">
+            <label for="username">用戶名:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">密碼:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="登入">
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2023 Pegasus Computer All rights reserved.</p>
+    </footer>
+
+    <!-- Inline JavaScript -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Here you would typically send the credentials to the server for validation
+            alert(`用戶名: ${username}\n密碼: ${password}`);
+        });
+    </script>
+
+</body>
+</html>
